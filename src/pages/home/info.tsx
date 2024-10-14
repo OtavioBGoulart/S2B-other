@@ -119,24 +119,3 @@ const Card = styled.div`
     }
 `;
 
-
-const SaibaMais = styled.button`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    width: 50%;
-    height: 50px;
-    font-family: ${({ theme }) => theme.fonts.main};
-    font-size: ${({ theme }) => theme.fontSizes.medium};
-    font-weight: 600;
-    background-color: ${({ theme }) => theme.colors.primary.lighter};
-    color: ${({ theme }) => theme.colors.secondary.lighter};
-    margin-top: 20px; 
-    align-self: center; 
-
-    &:hover {
-        cursor: pointer;   
-        filter: brightness(95%) ;
-    }
-`;

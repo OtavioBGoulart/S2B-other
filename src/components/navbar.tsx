@@ -95,19 +95,6 @@ const NavItem = styled.span`
     }
 `;
 
-const Submenu = styled.div`
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    background-color: ${({ theme }) => theme.colors.primary.light};
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-`;
-
 const SubmenuItem = styled.span`
     color: ${({ theme }) => theme.colors.secondary.light};
     font-size: ${({ theme }) => theme.fontSizes.small};

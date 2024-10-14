@@ -70,57 +70,6 @@ const Header = styled.div`
   }
 `
 
-const Content = styled.div`
-  max-width: 1200px;
-  text-align: justify;
-
-  h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    color: ${({ theme }) => theme.colors.secondary.light};
-    font-size: ${({ theme }) => theme.fontSizes.xmedium};
-  }
-
-  span {
-    color: ${({ theme }) => theme.colors.secondary.light};
-    font-size: ${({ theme }) => theme.fontSizes.medium};
-    font-weight: 300;
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  br {
-    margin-bottom: 20px;
-  }
-
-
-
-  @media (max-width: 768px) {
-    max-width: 90%;
-    padding: 10px;
-
-    h1 {
-      font-size: ${({ theme }) => theme.fontSizes.medium}; 
-    }
-
-    span {
-        font-size: ${({ theme }) => theme.fontSizes.small};
-    }
-
-    @media (max-width: 480px) {
-
-    h1 {
-      font-size: ${({ theme }) => theme.fontSizes.small}; 
-    }
-
-    span {
-      font-size: 14px; 
-    }
-  }
-
-  }
-`;
-
 const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;

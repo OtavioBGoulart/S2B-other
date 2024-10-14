@@ -5,7 +5,6 @@ import { ScrollProvider } from "./hooks/useRef";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./assets/style/themes";
 import { GlobalStyle } from "./assets/style/globalStyle";
-import { Sobre } from "./pages/home/sobre";
 import { Neoagro } from "./pages/neoagro";
 import { Form } from "./components/form";
 import { Compras } from "./pages/neoagro/modules/buy";
