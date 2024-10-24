@@ -13,22 +13,52 @@ export function Solutions() {
       <ProductsContainer>
         <CardsContainer>
           <Card>
-            <span>Sistema de Gestão para Agronegócio (neOagro)</span>
+            <TitleContainer>
+              <span>Sistema de Gestão para Agronegócio (neOagro)</span>
+            </TitleContainer>
+            <ImageContainer>
+              <img src="/solutions-images/agro.png" />
+            </ImageContainer>
           </Card>
           <Card>
-            <span>Inovação Agro IoT</span>
+            <TitleContainer>
+              <span>Inovação Agro IoT</span>
+            </TitleContainer>
+            <ImageContainer>
+              <img src="/solutions-images/bi.png" />
+            </ImageContainer>
           </Card>
           <Card>
-            <span>Serviços de Consultoria e Soluções em Business Intelligence (BI)</span>
+            <TitleContainer>
+              <span>Serviços de Consultoria e Soluções em Business Intelligence (BI)</span>
+            </TitleContainer>
+            <ImageContainer>
+              <img src="/solutions-images/iot.png" />
+            </ImageContainer>
           </Card>
           <Card>
-            <span>Desenvolvimento de soluções  sob medida</span>
+            <TitleContainer>
+              <span>Desenvolvimento de soluções  sob medida</span>
+            </TitleContainer>
+            <ImageContainer>
+              <img src="/solutions-images/solucoessobmedida.png" />
+            </ImageContainer>
           </Card>
           <Card>
-            <span>Consultoria em Análise e Melhoria de Processos</span>
+            <TitleContainer>
+              <span>Consultoria em Análise e Melhoria de Processos</span>
+            </TitleContainer>
+            <ImageContainer>
+              <img src="/solutions-images/consultoria.png" />
+            </ImageContainer>
           </Card>
           <Card>
-            <span>Serviços de Gerenciamento de TI em Geral</span>
+            <TitleContainer>
+              <span>Serviços de Gerenciamento de TI em Geral</span>
+            </TitleContainer>
+            <ImageContainer>
+              <img src="/solutions-images/ti.png" />
+            </ImageContainer>
           </Card>
         </CardsContainer>
       </ProductsContainer>
@@ -39,11 +69,12 @@ export function Solutions() {
 const Container = styled.div`
     width: 100%;  
     height: auto;
-    background: linear-gradient(90deg, 
+    /* background: linear-gradient(90deg, 
     ${({ theme }) => theme.colors.primary.light}, 
     #2a4f78,
     ${({ theme }) => theme.colors.primary.lighter}
-  );
+    ); */
+    background-color: ${({ theme }) => theme.colors.secondary.light};
   margin-top: -7px;
 `;
 
@@ -56,7 +87,7 @@ const Header = styled.div`
 
 
   h1 {
-    color: ${({ theme }) => theme.colors.secondary.light};
+    color: ${({ theme }) => theme.colors.primary.light};
     font-family: ${({ theme }) => theme.fonts.heading};
     font-size: ${({ theme }) => theme.fontSizes.xlarge};
     font-weight: 800;
@@ -97,8 +128,8 @@ const Card = styled.div`
     max-height: 350px;
     padding: 10px;
     border: 3px solid  ${({ theme }) => theme.colors.primary.lighter};
-    background: ${({ theme }) => theme.colors.primary.light}CC;
-    border-radius: 10px;
+    background-color: ${({ theme }) => theme.colors.secondary.lighter};
+    border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -110,12 +141,14 @@ const Card = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.lighter}; */
     transition: transform 0.2 ease-in-out, box-shadow 0.2 ease-in-out;
 
+    @media (max-width: 1250px) {
+      width: 48%;
+    };
+
     @media (max-width: 900px) {
-        flex-direction: row;
         width: 100%;
         gap: 25px;
-
-    
+        height: 300px;
     };
 
     /* &:hover {
@@ -125,24 +158,32 @@ const Card = styled.div`
         border-radius: 10px;
     } */
 
-    span {
+`
+
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 80%;
+    height: 150px;
+    border-radius: 5px;
+  }
+`
+
+const TitleContainer = styled.div`
+  min-height: 60px;
+  text-align: center;
+
+  span {
     font-family: ${({ theme }) => theme.fonts.content};
-    color: ${({ theme }) => theme.colors.secondary.light};
+    color: ${({ theme }) => theme.colors.primary.light};
     font-size: ${({ theme }) => theme.fontSizes.medium};
     font-weight: 800;
     margin-bottom: 20px;
     text-align: center;
-    }
-
-    img {
-        width: 70px;
-        height: 70px;
-
-        svg {
-            color: ${({ theme }) => theme.colors.secondary.lighter};
-        }
-
-        &:hover {
-        }
     }
 `
